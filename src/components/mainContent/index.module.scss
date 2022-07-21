@@ -1,0 +1,24 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
+
+.mainContent {
+  flex: 5;
+  background-color: $gray-2;
+  padding: 32px;
+}
+
+.titleRow {
+  @include flexibleRow(row, center, space-between);
+  h1 {
+    font-weight: 700;
+    font-size: 25px;
+    color: #03053d;
+  }
+  span {
+    padding: 12px;
+    color: $black-1;
+    background-color: $gray-4;
+    border-radius: 8px;
+  }
+  margin-bottom: 20px;
+}

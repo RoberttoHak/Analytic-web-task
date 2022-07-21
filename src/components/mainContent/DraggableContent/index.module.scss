@@ -1,0 +1,53 @@
+@import "../../../styles/variables.scss";
+@import "../../../styles/mixins.scss";
+
+.mainContainer {
+  display: flex;
+  gap: 19px;
+  flex-wrap: wrap;
+  margin-top: 15px;
+}
+
+.dynamicCubeContainer {
+  background: $white;
+  box-shadow: 0px 1px 0px #edf3fe;
+  border-radius: 10px;
+  width: 362px;
+  padding: 24px;
+  @include flexibleRow(column, flex-start, space-between);
+}
+
+.titleContainer {
+  @include flexibleRow(row, center, space-between);
+  h3 {
+    font-weight: 700;
+    font-size: 20px;
+    color: $black;
+  }
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.valueContainer {
+  width: 100%;
+  @include flexibleRow(row, center, space-between);
+  div {
+    @include flexibleRow(column, flex-start, space-between);
+    h1 {
+      font-weight: 700;
+      font-size: 28px;
+      color: $black;
+      margin-bottom: 10px;
+    }
+
+    span {
+      font-weight: 400;
+      font-size: 14px;
+      color: $gray-3;
+    }
+  }
+}
+
+.dollarIcon {
+  background: url("../../../assets/icons/googleIcon.png") no-repeat fixed center;
+}

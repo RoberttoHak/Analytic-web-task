@@ -1,0 +1,105 @@
+@import "../../../styles/variables.scss";
+@import "../../../styles/mixins.scss";
+
+.tableWrapper {
+  background: #ffffff;
+  box-shadow: 0px 1px 0px #edf3fe;
+  border-radius: 10px;
+  margin-bottom: 64px;
+  margin-top: 24px;
+
+  .header {
+    padding: 24px 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    h4 {
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 24px;
+      color: #03053d;
+    }
+  }
+
+  .content {
+    width: 100%;
+
+    @media (max-width: 1200px) {
+      overflow-x: auto;
+    }
+
+    table {
+      table-layout: fixed;
+      border-collapse: collapse;
+      width: 100%;
+
+      @media (max-width: 1550px) {
+        table-layout: inherit;
+      }
+
+      thead {
+        background: #f3f2f7;
+        border: 1px solid #e8e8e8;
+
+        tr {
+          padding-left: 28px;
+          padding-right: 28px;
+
+          th {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 19px;
+            color: #03053d;
+            text-align: left;
+            padding: 10px 12px;
+
+            @media (min-width: 1200px) {
+              word-break: break-word;
+            }
+          }
+
+          .first {
+            padding-left: 28px;
+          }
+          .last {
+            padding-right: 28px;
+          }
+        }
+      }
+
+      tbody {
+        tr {
+          border-bottom: 1px solid #e8e8e8;
+
+          td {
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 19px;
+            color: #03053d;
+            padding: 24px 12px;
+
+            > p {
+              margin-bottom: 16px;
+            }
+
+            .value {
+              font-weight: 400;
+              font-size: 16px;
+              line-height: 19px;
+              color: #6d6b7a;
+              margin-left: 6px;
+            }
+          }
+
+          .first {
+            padding-left: 28px;
+          }
+          .last {
+            padding-right: 28px;
+          }
+        }
+      }
+    }
+  }
+}

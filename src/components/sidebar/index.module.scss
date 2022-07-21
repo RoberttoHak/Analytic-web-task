@@ -1,0 +1,54 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
+
+.sideBar_wrapper {
+  min-height: 100%;
+  background-color: $white;
+  // width: 336px;
+  flex: 1;
+  padding: 16px;
+  @include flexibleRow(column, center, flex-start);
+
+  h2 {
+    font-weight: 700;
+    font-size: 25px;
+    margin: 0 0 18px -100px;
+    color: $black;
+  }
+
+  span {
+    font-weight: 400;
+    font-size: 18px;
+    padding-left: 10px;
+  }
+}
+
+.logoContainer {
+  width: 290px;
+  padding: 18px;
+  background: #ffffff;
+  border: 1px solid #cdd0d4;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.unorderedList {
+  padding: 5px;
+  width: 100%;
+  li {
+    list-style: none;
+    margin-top: 31px;
+    @include flexibleRow(row, center, space-between);
+
+    div {
+      display: flex;
+      align-items: center;
+
+      span:nth-child(2) {
+        font-weight: 500;
+        font-size: 18px;
+        color: $gray-3;
+      }
+    }
+  }
+}
